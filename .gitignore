@@ -1,0 +1,16 @@
+# Python 虚拟环境与缓存
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE 配置
+.idea/
+*.iml
+.vscode/
+.settings/
+
+# 操作系统
+.DS_Store
+Thumbs.db
