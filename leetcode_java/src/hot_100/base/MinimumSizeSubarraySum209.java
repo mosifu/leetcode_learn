@@ -18,6 +18,19 @@ package hot_100.base;
  * 输出：0
  */
 public class MinimumSizeSubarraySum209 {
-
+    public int minSubArrayLen(int target, int[] nums) {
+        int fast = 0, slow = 0, sum = 0; // 定义快慢指针和区间总和
+        int min_len = Integer.MAX_VALUE;    // 区间最小长度,默认初始化为最大值
+        while (fast < nums.length) {
+            sum += nums[fast];
+            while (sum >= target) {
+                min_len = Integer.min(min_len, fast-slow+1);    // 取区间数总和大于目标值的区间长度
+                sum -= nums[slow];  // 慢指针移动后需要减去不在区间的数
+                slow += 1;   // 慢指针移动
+            }
+            fast += 1;  // 移动快指针
+        }
+        return min_len != Integer.MAX_VALUE ? min_len : 0;
+    }
     
 }
