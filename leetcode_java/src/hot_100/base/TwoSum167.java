@@ -1,4 +1,4 @@
-package hot_100.towsum;
+package hot_100.base;
 
 import java.util.HashMap;
 import java.util.Map;
