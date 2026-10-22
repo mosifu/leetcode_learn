@@ -27,7 +27,7 @@ import java.util.Set;
  * 0 <= s.length <= 105
  * s 由英文字母、数字、符号和空格组成
  */
-public class LongestSubstringWithoutRepeatingCharacters3 {
+public class LongestSubstringWithoutRepeatingCharacters_3 {
     public static int lengthOfLongestSubstring(String s) {
         int right = 0, left = 0, max_len = 0;
         Set<String> strSet = new HashSet<>();   // 用来存储区间字符串

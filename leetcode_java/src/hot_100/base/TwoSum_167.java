@@ -25,7 +25,7 @@ import java.util.Map;
  * 输出：[1,2]
  * 解释：-1 与 0 之和等于目标数 -1 。因此 index1 = 1, index2 = 2 。返回 [1, 2] 。
  */
-public class TwoSum167 {
+public class TwoSum_167 {
     public int[] twoSum(int[] numbers, int target) {
         // 使用哈希表来实现（不符合题目要求“所设计的解决方案必须只使用常数级的额外空间。”）
         Map<Integer, Integer> cache = new HashMap<>();

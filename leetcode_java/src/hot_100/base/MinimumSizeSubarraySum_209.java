@@ -17,7 +17,7 @@ package hot_100.base;
  * 输入：target = 11, nums = [1,1,1,1,1,1,1,1]
  * 输出：0
  */
-public class MinimumSizeSubarraySum209 {
+public class MinimumSizeSubarraySum_209 {
     public int minSubArrayLen(int target, int[] nums) {
         int fast = 0, slow = 0, sum = 0; // 定义快慢指针和区间总和
         int min_len = Integer.MAX_VALUE;    // 区间最小长度,默认初始化为最大值
