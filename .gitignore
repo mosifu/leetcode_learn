@@ -11,6 +11,11 @@ __pycache__/
 .vscode/
 .settings/
 
+# Java 编译产物
+out/
+build/
+target/
+
 # 操作系统
 .DS_Store
 Thumbs.db
