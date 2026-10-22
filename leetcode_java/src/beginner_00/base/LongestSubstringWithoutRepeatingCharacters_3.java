@@ -1,4 +1,4 @@
-package hot_100.base;
+package beginner_00.base;
 
 
 import java.util.HashSet;
