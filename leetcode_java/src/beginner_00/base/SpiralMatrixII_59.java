@@ -50,6 +50,42 @@ public class SpiralMatrixII_59 {
         return matrix;
     }
 
+    public static int[][] generateMatrix1(int n) {
+        // 使用边界收缩法,设置上下左右四个边界
+        int top = 0, bottom = n - 1;
+        int left = 0, right = n - 1;
+        int count = 1;
+        int[][] matrix = new int[n][n];
+        while (count <= n*n) {
+            for (int j = left; j < right + 1; j++) {
+                // 上边界从左往右遍历完,往下收缩
+                matrix[top][j] = count;
+                count += 1;
+            }
+            top += 1;
+            for (int i = top; i < bottom + 1; i++) {
+                // 右边界从上往下遍历完,往左收缩
+                matrix[i][right] = count;
+                count += 1;
+            }
+            right -= 1;
+            for (int j = right; j > left - 1; j--) {
+                // 下边界从右往左遍历完,往上收缩
+                matrix[bottom][j] = count;
+                count += 1;
+            }
+            bottom -= 1;
+            for (int i = bottom; i > top - 1; i--) {
+                // 左边界从下往上遍历完,往右收缩
+                matrix[i][left] = count;
+                count += 1;
+            }
+            left += 1;
+        }
+        return matrix;
+
+    }
+
     public static void main(String[] args) {
         System.out.println(Arrays.deepToString(generateMatrix(4)));
     }
