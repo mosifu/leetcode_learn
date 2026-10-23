@@ -36,6 +36,37 @@ class Solution:
         if n % 2 == 1:
             matrix[n//2][n//2] = count
         return matrix
+
+    def generateMatrix1(self, n: int) -> list[list[int]]:
+        # 使用边界收缩法,设置上下左右四个边界
+        top, bottom = 0, n-1
+        left, right = 0, n-1
+        count = 1
+        matrix = [[0] * n for _ in range(n)]
+        while count <= n**2:
+            for j in range(left, right+1):
+                # 针对上边界,从左到右跑完之后,上边界往下收缩
+                matrix[top][j] = count
+                count += 1
+            top += 1
+            for i in range(top, bottom+1):
+                # 对于右边界,从上到下跑完,右边界往左收缩
+                matrix[i][right] = count
+                count += 1
+            right -= 1
+            for j in range(right, left-1, -1):
+                # 对于下边界,从右往左跑完,下边界往上收缩
+                matrix[bottom][j] = count
+                count += 1
+            bottom -= 1
+            for i in range(bottom, top-1, -1):
+                # 对于左边界,从下往上跑完,左边界往右收缩
+                matrix[i][left] = count
+                count += 1
+            left += 1
+        return matrix
+
+
 if __name__ == '__main__':
     print(Solution().generateMatrix(4))
 
