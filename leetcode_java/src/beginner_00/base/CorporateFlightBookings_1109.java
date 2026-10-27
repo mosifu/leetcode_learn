@@ -44,4 +44,12 @@ public class CorporateFlightBookings_1109 {
         }
         return answer;
     }
+
+    public static void main(String[] args) {
+        CorporateFlightBookings_1109 obj = new CorporateFlightBookings_1109();
+        int[][] bookings = {{1,2,10},{2,3,20},{2,5,25}};
+        int[] ans = obj.corpFlightBookings(bookings, 5);
+        System.out.println(java.util.Arrays.toString(ans)); // 期望 [10, 55, 45, 25, 25]
+    }
+
 }
