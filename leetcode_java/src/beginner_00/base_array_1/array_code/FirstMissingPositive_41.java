@@ -1,4 +1,4 @@
-package beginner_00.base;
+package beginner_00.base_array_1.array_code;
 
 /**41.缺失的第一个正数
  * 给你一个未排序的整数数组 nums ，请你找出其中没有出现的最小的正整数。

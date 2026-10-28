@@ -1,4 +1,4 @@
-package beginner_00.base;
+package beginner_00.base_array_1.array_code;
 
 /**1109.航班预订统计
  * 这里有 n 个航班，它们分别从 1 到 n 进行编号。

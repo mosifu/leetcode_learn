@@ -1,4 +1,4 @@
-package beginner_00.base;
+package beginner_00.base_array_1.array_code;
 
 /**704. 二分查找
  * 给定一个 n 个元素有序的（升序）整型数组 nums 和一个目标值 target  ，写一个函数搜索 nums 中的 target，如果 target 存在返回下标，否则返回 -1。

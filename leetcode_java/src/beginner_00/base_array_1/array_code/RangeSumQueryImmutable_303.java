@@ -1,4 +1,4 @@
-package beginner_00.base;
+package beginner_00.base_array_1.array_code;
 
 /**303.区域和检索-数组不可变
  * 给定一个整数数组  nums，处理以下类型的多个查询:

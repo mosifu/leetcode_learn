@@ -1,4 +1,4 @@
-package beginner_00.base;
+package beginner_00.base_array_1.array_code;
 
 /**209.长度最小的子数组
  * 给定一个含有 n 个正整数的数组和一个正整数 target 。
