@@ -2,7 +2,7 @@
 
 按 **Hot 100 高频题** 系统练习算法，每道题用 **Python** 与 **Java** 双语言实现，并附学习笔记。解题代码与笔记分离存放，按「难度层级 → 题型套路」分级归档，便于回看与横向对比。
 
-当前进度：**13 题**，Python 与 Java 各 13 份实现，对应 13 份学习笔记。
+当前进度：**16 题**，Python 与 Java 各 16 份实现，对应 16 份学习笔记。
 
 ## 目录结构
 
@@ -57,6 +57,9 @@ leetcode_learn/
 
 | 题号 | 题目 | 主要考点 | Python | Java |
 |:----:|------|----------|:------:|:----:|
+| 21 | 合并两个有序链表 | 双指针 / 递归 | [✅](leetcode_python/00.beginner/2.入门链表常见套路/21.合并两个有序链表.py) | [✅](leetcode_java/src/beginner_00/base_linked_list_2/linked_code/MergeTwoSortedLists_21.java) |
+| 141 | 环形链表 | 快慢指针 | [✅](leetcode_python/00.beginner/2.入门链表常见套路/141.环形链表.py) | [✅](leetcode_java/src/beginner_00/base_linked_list_2/linked_code/LinkedListCycle_141.java) |
+| 142 | 环形链表 II | 快慢指针 / 环入口 | [✅](leetcode_python/00.beginner/2.入门链表常见套路/142.环形链表II.py) | [✅](leetcode_java/src/beginner_00/base_linked_list_2/linked_code/LinkedListCycleII_142.java) |
 | 206 | 反转链表 | 双指针 / 递归 | [✅](leetcode_python/00.beginner/2.入门链表常见套路/206.反转链表.py) | [✅](leetcode_java/src/beginner_00/base_linked_list_2/linked_code/ReverseLinkedList_206.java) |
 
 > 每题的笔记与对应代码按同题型归类存放，表内 ✅ 可直接跳转到对应语言的解题文件。
@@ -77,7 +80,7 @@ python "leetcode_python/00.beginner/1.入门数组常见套路/59.螺旋矩阵II
 
 用 IntelliJ IDEA 打开 `leetcode_java/` 目录，将 `src` 标记为 **Sources Root** 即可（IDE 配置按约定不入库，需本地生成）。
 
-部分类含 `public static void main`，当前为 3、59、303、560、1109，可直接运行；其余为解法类，供调用或自行编写测试。
+部分类含 `public static void main`，当前为 3、21、59、303、560、1109，可直接运行；其余为解法类，供调用或自行编写测试。
 
 命令行方式（以第 59 题为例）：
 
