@@ -2,7 +2,7 @@
 
 按 **Hot 100 高频题** 系统练习算法，每道题用 **Python** 与 **Java** 双语言实现，并附学习笔记。解题代码与笔记分离存放，按「难度层级 → 题型套路」分级归档，便于回看与横向对比。
 
-当前进度：**16 题**，Python 与 Java 各 16 份实现，对应 16 份学习笔记。
+当前进度：**25 题**，Python 与 Java 双语言各 25 份解题实现，每题配套学习笔记（代码与笔记分目录存放）。
 
 ## 目录结构
 
@@ -12,17 +12,27 @@ leetcode_learn/
 │   └── 00.beginner/                        # 入门级
 │       ├── 1.入门数组常见套路/              # 数组题解题代码（.py）
 │       ├── 2.入门链表常见套路/              # 链表题解题代码（.py）
+│       ├── 3.入门栈常见套路/                # 栈题解题代码（.py）
+│       ├── 4.入门二叉树常见套路/            # 二叉树题解题代码（.py）
 │       └── 0.learn_docs/                   # 学习笔记（.md）
 │           ├── 1.入门数组常见套路/
-│           └── 2.入门链表常见套路/
+│           ├── 2.入门链表常见套路/
+│           ├── 3.入门栈常见套路/
+│           └── 4.入门二叉树常见套路/
 ├── leetcode_java/
 │   └── src/beginner_00/                    # 入门级
 │       ├── base_array_1/
 │       │   ├── array_code/                 # 数组题解题代码（.java）
 │       │   └── array_docs/                 # 数组题学习笔记（.md）
-│       └── base_linked_list_2/
-│           ├── linked_code/                # 链表题解题代码（.java）
-│           └── linked_docs/                # 链表题学习笔记（.md）
+│       ├── base_linked_list_2/
+│       │   ├── linked_code/                # 链表题解题代码（.java）
+│       │   └── linked_docs/                # 链表题学习笔记（.md）
+│       ├── base_stack_3/
+│       │   ├── stack_code/                 # 栈题解题代码（.java）
+│       │   └── stack_docs/                 # 栈题学习笔记（.md）
+│       └── base_binary_tree_4/
+│           ├── tree_code/                  # 二叉树题解题代码（.java）
+│           └── tree_docs/                  # 二叉树题学习笔记（.md）
 ├── .gitignore
 └── README.md
 ```
@@ -30,8 +40,8 @@ leetcode_learn/
 目录约定：
 
 - **代码与笔记分目录**：代码目录放可运行的解法，笔记目录放思路拆解、复杂度分析与易错点。
-- **Java 包名与目录严格对应**：`array_code/` 下文件的包名为 `beginner_00.base_array_1.array_code`，`linked_code/` 下为 `beginner_00.base_linked_list_2.linked_code`。
-- **文件命名**：Python 以「题号.题名」命名；Java 类名采用英文驼峰 + 题号后缀（如 `BinarySearch_704`），与笔记题号一一对应。
+- **Java 包名与目录严格对应**：`array_code/` 下文件的包名为 `beginner_00.base_array_1.array_code`，`linked_code/` 为 `beginner_00.base_linked_list_2.linked_code`，`stack_code/` 为 `beginner_00.base_stack_3.stack_code`，`tree_code/` 为 `beginner_00.base_binary_tree_4.tree_code`。
+- **文件命名**：Python 以「题号.题名」命名；Java 类名采用英文驼峰 + 题号后缀（如 `BinarySearch_704`、`BinaryTreeTraversal_144_94_145`），与笔记题号一一对应。
 - **不入库内容**：`leetcode_java/out/`（编译产物）、`leetcode_python/.venv/`、`__pycache__/`、`*.pyc`、`.idea/` 均已在 `.gitignore` 中排除。
 
 ## 题目进度
@@ -62,16 +72,37 @@ leetcode_learn/
 | 142 | 环形链表 II | 快慢指针 / 环入口 | [✅](leetcode_python/00.beginner/2.入门链表常见套路/142.环形链表II.py) | [✅](leetcode_java/src/beginner_00/base_linked_list_2/linked_code/LinkedListCycleII_142.java) |
 | 206 | 反转链表 | 双指针 / 递归 | [✅](leetcode_python/00.beginner/2.入门链表常见套路/206.反转链表.py) | [✅](leetcode_java/src/beginner_00/base_linked_list_2/linked_code/ReverseLinkedList_206.java) |
 
+### 栈
+
+| 题号 | 题目 | 主要考点 | Python | Java |
+|:----:|------|----------|:------:|:----:|
+| 20 | 有效的括号 | 栈 | [✅](leetcode_python/00.beginner/3.入门栈常见套路/20.有效的括号.py) | [✅](leetcode_java/src/beginner_00/base_stack_3/stack_code/ValidParentheses_20.java) |
+| 155 | 最小栈 | 辅助栈 | [✅](leetcode_python/00.beginner/3.入门栈常见套路/155.最小栈.py) | [✅](leetcode_java/src/beginner_00/base_stack_3/stack_code/MinStack_155.java) |
+| 227 | 基本计算器 II | 表达式求值 / 栈 | [✅](leetcode_python/00.beginner/3.入门栈常见套路/227.基本计算器II.py) | [✅](leetcode_java/src/beginner_00/base_stack_3/stack_code/BasicCalculatorII_227.java) |
+| 232 | 用栈实现队列 | 双栈 | [✅](leetcode_python/00.beginner/3.入门栈常见套路/232.用栈实现队列.py) | [✅](leetcode_java/src/beginner_00/base_stack_3/stack_code/ImplementQueueUsingStacks_232.java) |
+| 394 | 字符串解码 | 辅助栈 | [✅](leetcode_python/00.beginner/3.入门栈常见套路/394.字符串解码.py) | [✅](leetcode_java/src/beginner_00/base_stack_3/stack_code/DecodeString_394.java) |
+| 739 | 每日温度 | 单调栈 | [✅](leetcode_python/00.beginner/3.入门栈常见套路/739.每日温度.py) | [✅](leetcode_java/src/beginner_00/base_stack_3/stack_code/DailyTemperatures_739.java) |
+
+### 二叉树
+
+> 第 144/94/145 题（前 / 中 / 后序遍历）合并存放于同一份代码与笔记文件中。
+
+| 题号 | 题目 | 主要考点 | Python | Java |
+|:----:|------|----------|:------:|:----:|
+| 94 | 二叉树的中序遍历 | 递归 / 迭代（左根右） | [✅](leetcode_python/00.beginner/4.入门二叉树常见套路/144_94_145.二叉树的前_中_后序遍历.py) | [✅](leetcode_java/src/beginner_00/base_binary_tree_4/tree_code/BinaryTreeTraversal_144_94_145.java) |
+| 144 | 二叉树的前序遍历 | 递归 / 迭代（根左右） | [✅](leetcode_python/00.beginner/4.入门二叉树常见套路/144_94_145.二叉树的前_中_后序遍历.py) | [✅](leetcode_java/src/beginner_00/base_binary_tree_4/tree_code/BinaryTreeTraversal_144_94_145.java) |
+| 145 | 二叉树的后序遍历 | 递归 / 迭代（左右根） | [✅](leetcode_python/00.beginner/4.入门二叉树常见套路/144_94_145.二叉树的前_中_后序遍历.py) | [✅](leetcode_java/src/beginner_00/base_binary_tree_4/tree_code/BinaryTreeTraversal_144_94_145.java) |
+
 > 每题的笔记与对应代码按同题型归类存放，表内 ✅ 可直接跳转到对应语言的解题文件。
 
 ## 本地运行
 
 ### Python
 
-部分题目自带自测入口（`if __name__ == '__main__':` 块），当前为 56、59、303、560，可直接运行：
+部分题目自带自测入口（`if __name__ == '__main__':` 块），当前为 20、56、59、155、227、303、394、560、739，可直接运行：
 
 ```bash
-python "leetcode_python/00.beginner/1.入门数组常见套路/59.螺旋矩阵II.py"
+python "leetcode_python/00.beginner/3.入门栈常见套路/227.基本计算器II.py"
 ```
 
 其余文件为纯解法（函数或类），可按模块方式导入调用，或自行补充测试用例。
@@ -80,7 +111,7 @@ python "leetcode_python/00.beginner/1.入门数组常见套路/59.螺旋矩阵II
 
 用 IntelliJ IDEA 打开 `leetcode_java/` 目录，将 `src` 标记为 **Sources Root** 即可（IDE 配置按约定不入库，需本地生成）。
 
-部分类含 `public static void main`，当前为 3、21、59、303、560、1109，可直接运行；其余为解法类，供调用或自行编写测试。
+部分类含 `public static void main`，当前为 3、20、21、59、155、227、303、394、560、739、1109、144/94/145，可直接运行；其余为解法类（如 232 仅含解法、无 `main`），供调用或自行编写测试。
 
 命令行方式（以第 59 题为例）：
 
@@ -88,6 +119,14 @@ python "leetcode_python/00.beginner/1.入门数组常见套路/59.螺旋矩阵II
 cd leetcode_java
 javac -encoding UTF-8 -d out src/beginner_00/base_array_1/array_code/SpiralMatrixII_59.java
 java -cp out beginner_00.base_array_1.array_code.SpiralMatrixII_59
+```
+
+二叉树示例（前序遍历输出 `[1, 2, 4, 5, 6, 7, 3, 8, 9]`）：
+
+```bash
+cd leetcode_java
+javac -encoding UTF-8 -d out src/beginner_00/base_binary_tree_4/tree_code/BinaryTreeTraversal_144_94_145.java
+java -cp out beginner_00.base_binary_tree_4.tree_code.BinaryTreeTraversal_144_94_145
 ```
 
 编译产物输出到 `out/`（已忽略，不入库）。
