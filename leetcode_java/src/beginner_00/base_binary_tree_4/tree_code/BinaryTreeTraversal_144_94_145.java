@@ -94,37 +94,10 @@ public class BinaryTreeTraversal_144_94_145 {
         return res;
     }
 
-    // 由整形列表创建二叉树
-    public TreeNode buildTree(List<Integer> list) {
-        // 先判断是否为空(判断列表是否存在(null)，存在是否为空列表([]),以及存在列表但第一个元素是否为null([null,1,2]))
-        if (list == null || list.isEmpty() || list.get(0) == null) {
-            return null;
-        }
-        TreeNode treeRoot = new TreeNode(list.get(0));  // 创建根节点
-        Queue<TreeNode> queue = new ArrayDeque<>();  // 定义变量队列类型,实现数组双端队列类
-        queue.offer(treeRoot);  // 把当前根节点的信息添加到队列
-        int i = 1;  // 下一步要遍历的数组下标
-        while (!queue.isEmpty() && i < list.size()) {
-            TreeNode node = queue.poll();   // 第一次循环时,node就已经指向的引用就是根节点指向的引用
-            Integer leftVal = list.get(i++);
-            if (leftVal!=null) {
-                node.left = new TreeNode(leftVal);
-                queue.offer(node.left);
-            }
-            if (i < list.size()) {
-                Integer rightVal = list.get(i++);
-                if (rightVal != null) {
-                    node.right = new TreeNode(rightVal);
-                    queue.offer(node.right);
-                }
-            }
-        }
-        return treeRoot;
-    }
-
     public static void main(String[] args) {
+        BuildTree b = new BuildTree();
         BinaryTreeTraversal_144_94_145 obj = new BinaryTreeTraversal_144_94_145();
-        TreeNode treeNode = obj.buildTree(Arrays.asList(1,2,3,4,5,null,8,null,null,6,7,9));
+        TreeNode treeNode = b.buildTree(Arrays.asList(1,2,3,4,5,null,8,null,null,6,7,9));
         System.out.printf(obj.preorderTraversal(treeNode).toString());  //前序
     }
 }
